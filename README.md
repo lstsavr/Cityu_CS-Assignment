@@ -1,6 +1,6 @@
 # Cityu CS Assignment
-- Cityu cs assignment  
+- Cityu CS assignment  
 
-Just to provide some ideas ❤  
+Just to provide some ideas  
 Content may different from yours
 
