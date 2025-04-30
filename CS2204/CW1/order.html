@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/theme.css" media="all" type="text/css">
+    <title>Order Page-DisneyLand</title>
+</head>
+<body>
+    <header class="the-banner-block">
+        <div class="banner-content">
+            <img src="../image/image/logo.png" alt="DisneyLand logo">
+            <h2>DisneyLand</h2>
+        </div>
+        <p>welcome</p>
+    </header>
+
+    <div class="menu">
+        <h2>Menu</h2>
+        <div class="Tickets">
+            <h3>Tickets</h3>
+            <form action="#">
+                <img src="../image/image/ticket-1.jpeg" alt="1-Day Ticket" id="Ticket-1">
+                <label for="ticket1">1-Day Ticket</label>
+                <input name="ticket-1" type="number" id="ticket1" min="0">
+                <button type="button" id="t1">Add</button>
+            </form>
+            <form action="#">
+                <img src="../image/image/ticket-2.jpeg" alt="1-Day Ticket (Child)" id="Ticket-2">
+                <label for="ticket2">1-Day Ticket(Child)</label>
+                <input name="ticket-2" type="number" id="ticket2" min="0">
+                <button type="button" id="t2">Add</button>
+            </form>
+            <form action="#">
+                <img src="../image/image/ticket-3.jpeg" alt="2-Day Ticket" id="Ticket-3">
+                <label for="ticket3">2-Day Ticket</label>
+                <input name="ticket-3" type="number" id="ticket3" min="0">
+                <button type="button" id="t3">Add</button>
+            </form>
+        </div>
+    
+        <div class="Dining">
+            <h3>Dining</h3>
+            <form action="#">
+                <img src="../image/image/dining-1.jpeg" alt="Explorer's Semi Buffet" id="dining-1">
+                <label for="dining1">Explorer's Semi Buffet</label>
+                <input name="DINING-1" type="number" id="dining1" min="0">
+                <button type="button" id="d1">Add</button>
+            </form>
+            <form action="#">
+                <img src="../image/image/dining-2.jpeg" alt="3-in-1 Park Meal Voucher" id="dining-2">
+                <label for="dining2">3-in-1 Park Meal Voucher</label>
+                <input name="DINING-2" type="number" id="dining2" min="0">
+                <button type="button" id="d2">Add</button>
+            </form>
+        </div>
+    
+        <div class="hotel">
+            <h3>Hotel</h3>
+            <form action="#">
+                <img src="../image/image/hotel-1.jpeg" alt="Standard Room" id="romm-1">
+                <label for="room1">Standard Room</label>
+                <input name="ROOM-1" type="number" id="room1" min="0">
+                <button type="button" id="r1">Add</button>
+            </form>
+            <form action="#">
+                <img src="../image/image/hotel-2.jpeg" alt="Deluxe Room" id="romm-2">
+                <label for="room2">Deluxe Room</label>
+                <input name="ROOM-2" type="number" id="room2" min="0">
+                <button type="button" id="r2">Add</button>
+            </form>
+            <form action="#">
+                <img src="../image/image/hotel-3.jpeg" alt="Sea View Room" id="romm-3">
+                <label for="room3">Sea View Room</label>
+                <input name="ROOM-3" type="number" id="room3" min="0">
+                <button type="button" id="r3">Add</button>
+            </form>
+            <form action="#">
+                <img src="../image/image/hotel-4.jpeg" alt="Kingdom Club Room" id="romm-4">
+                <label for="room4">Kingdom Club Room</label>
+                <input name="ROOM-4" type="number" id="room4" min="0">
+                <button type="button" id="r4">Add</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="order-item-block">
+        <h2>Ordered Items</h2>
+        <h4>7 Jul 2022 22:22</h4>
+        <table>
+          <caption>Table:4-No. of Guests 3</caption>
+          <thead>
+            <tr>
+              <th class="description">Description</th>
+              <th class="quantity">Qty</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Table body is empty in CW1😀 -->
+          </tbody>
+          <tfoot>
+            <tr>
+              <td id="total">Total</td>
+              <td id="totalqty">0</td>
+            </tr>
+          </tfoot>
+        </table>
+        <label>
+          <a id="undo" href="#">undo</a>
+        </label>
+    </div>
+
+    <footer>
+        &copy; <span>CityU</span> 2024 sources of images and text from official website of Hong Kong Disneyland, 
+        Wikipedia and Courtesy of Icon pack by Icons8 –- designed by <a href="./design.html">Wang minda</a>
+    </footer>
+
+</body>
+</html>

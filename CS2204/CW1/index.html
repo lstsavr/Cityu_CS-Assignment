@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/theme.css" media="all" type="text/css">
+    <title>Home Page-DisneyLand</title>
+</head>
+<body>
+  <header class="the-banner-block">
+    <div class="banner-content">
+        <img src="image/image/logo.png" alt="DisneyLand logo">
+        <h2>DisneyLand</h2>
+    </div>
+    <p>welcome</p>
+  </header>
+
+    <div id="basic-information-block">
+      <p><strong>Address</strong><br>
+         Hong Kong Disneyland Resort,<br>
+         Penny's Bay, Lantau Island,<br>
+         Hong Kong
+      </p>
+      <p><strong>Tel</strong><br>+852 1-830-830</p>
+      <p><strong>Business Hours</strong><br>10:30 AM to 8:30 PM</p>
+      <p><strong>Brief Introduction</strong><br>
+         Enter a magical kingdom inspired by fairy-tale dreams and explore 7 lands:
+      </p>
+      <ul>
+         <li>Adventureland</li>
+         <li>Grizzly Gulch</li>
+         <li>Mystic Point</li>
+         <li>Toy Story Land</li>
+         <li>Fantasyland</li>
+         <li>Tomorrowland</li>
+         <li>Main Street, USA</li>
+      </ul>
+      <p><strong>Location</strong></p>
+      <img src="image/image/location.jpg" alt="location logo">
+      <div id="order_button">
+        <a href="./html/order.html" target=_blank>
+          <img src="image/image/button.jpg" alt="Order Button">
+        </a>
+      </div>
+  </div>
+  
+ 
+    <div id="promotion-information-block"> 
+      <h3> DISNEY PREMIER ACCESS & 1-DAY TICKET COMBO,STARTING FROM HK $798</h3>
+        <video id="video_1" controls="controls" autoplay="autoplay" muted="muted">
+            <source src="https://personal.cs.cityu.edu.hk/~cs2204/video/Castle.mp4" type="video/mp4">
+            <source src="https://personal.cs.cityu.edu.hk/~cs2204/video/Castle.ogg" type="video/ogg">
+            <h2>Your browser does not support the video tag.</h2>
+        </video>
+    </div>
+
+    <div>
+        <div id="the-booking-block">
+            <form action="#" method="post" id="book_information">
+              <fieldset>
+                <legend>Booking information</legend>
+                  <div class="form content">
+                  <label for="Date">Date</label>
+                  <input type="date" name="Date" id="Date">
+                   </div>
+                  <div class="form content">
+                    <label for="Time">Time</label>
+                    <select name="Time" id="Time">
+                       <option value="8:00-10:00AM">8:00-10:00AM</option>
+                       <option value="10:00-12:00PM">10:00-12:00PM</option>
+                       <option value="12:00-2:00PM">12:00-2:00PM</option>
+                       <option value="2:00-4:00PM">2:00-4:00PM</option>
+                       <option value="4:00-6:00PM">4:00-6:00PM</option>
+                       <option value="6:00-8:00PM">6:00-8:00PM</option>
+                    </select>
+                  </div>
+                  <div class="form content">
+                  <label for="visitor">No.of Visitors</label>
+                  <input type="number" name="visitor" id="visitor" min="0">
+                  </div>
+                  <br>
+                  <div class="form-button">
+                  <input type="submit" value="Check Availability">
+                  <input type="reset" value="Reset">
+                  </div>
+              </fieldset>
+            </form>
+          </div>
+    </div>
+
+    <footer>
+        &copy; <span>CityU</span> 2024 sources of images and text from official website of Hong Kong Disneyland, 
+        Wikipedia and Courtesy of Icon pack by Icons8 –- designed by <a href="html/design.html">Wang minda</a>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+.the-banner-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center; 
+    flex-direction: column;
+    font-family: "Georgia", serif;
+    color: blue;
+    font-size: 36px; 
+    font-weight: bold
+}
+
+.banner-content {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.banner-content h2 {
+    margin: 0; 
+}
+
+.the-banner-block p {
+    margin-top: 5px; 
+}
+
+/* index's CSS*/
+
+#basic-information-block {
+    background-color: #f8f9fa; 
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 80%; 
+    margin: 20px auto; 
+}
+
+#basic-information-block p {
+    font-size: 18px; 
+    margin-bottom: 10px; 
+}
+
+#basic-information-block strong {
+    color: #d9534f; 
+    font-size: 20px;
+}
+
+#basic-information-block ul {
+    font-size: 18px;
+}
+
+#basic-information-block img {
+    display: block; 
+    max-width: 100%; 
+    height: auto;
+    margin-top: 10px;
+}
+
+
+
+
+#promotion-information-block {
+    background-color: #fff3cd; 
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 80%; 
+    margin: 20px auto; 
+    text-align: center; 
+}
+
+#promotion-information-block h3 {
+    color: #d9534f; 
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#promotion-information-block video {
+    width: 80%; 
+    max-width: 800px; 
+    border-radius: 10px;
+    border: 3px solid #ffc107; 
+}
+
+
+
+#the-booking-block {
+    background-color: #f8f9fa; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%; 
+    margin: 20px auto; 
+}
+
+fieldset {
+    border: 2px solid #007bff; 
+    border-radius: 7.22px;
+    padding: 15px;
+}
+
+legend {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff; 
+    padding: 5px 10px;
+}
+
+.form.content {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 15px; 
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;;
+}
+
+input[type="date"],
+input[type="number"],
+select {
+    width: 95%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-button {
+    display: flex;
+    justify-content: space-between; 
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 41%;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: blue; 
+}
+
+
+.menu {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; 
+    margin: 20px auto ;
+    text-align: left; 
+}
+
+.menu h2 {
+    color: blue;
+    font-size: 32px; 
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.Tickets h3, .Dining h3, .hotel h3 {
+    color: #464646;
+    font-size: 24px; 
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.Tickets, .Dining, .hotel {
+    margin-bottom: 30px;
+}
+
+.menu form {
+    display: inline-block;
+    width: 280px; 
+    background: #ffffff;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin: 10px; 
+    vertical-align: top; 
+}
+
+
+.menu form img {
+    width: 100%;
+    max-width: 199px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+.menu form label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.menu form input {
+    width: 80%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.menu form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.menu form button:hover {
+    background-color: green;
+}
+
+
+
+#order-item-block {
+    background-color: rgb(247, 247, 203);
+    padding: 20px;
+    border: 1px solid gray; 
+    border-radius: 5px; 
+    width: 40%;
+    margin: 20px auto;
+}
+
+#order-item-block h2 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+#order-item-block h4 {
+    font-size: 18px;
+    color: red ; 
+    margin-bottom: 15px;
+}
+
+
+#order-item-block th, 
+#order-item-block td {
+    border: 1px solid gray; 
+    padding: 10px;
+    text-align: center;
+    background-color: white; 
+    font-weight: bold;
+}
+
+#order-item-block a {
+    color: blue;
+    font-size: 16px;
+}
+
+span {
+    font-weight: bold;
+    color: rgb(242, 87, 87);
+}
