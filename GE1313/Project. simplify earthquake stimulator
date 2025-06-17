@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Simulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        #controls {
+            margin-bottom: 20px;
+        }
+        #simulation {
+            width: 800px;
+            height: 400px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            position: relative;
+        }
+        #simulation canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Earthquake Simulator</h1>
+    <div id="controls">
+        <label for="duration">Duration (seconds):</label>
+        <input type="number" id="duration" min="1" value="1">
+        <label for="magnitude">Magnitude (1-9):</label>
+        <input type="number" id="magnitude" min="1" max="9" value="5">
+        <button onclick="simulateEarthquake()">Simulate Earthquake</button>
+    </div>
+    <div id="simulation"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+    <script>
+        const { Engine, Render, Runner, Bodies, Composite, Events, Body, Mouse, MouseConstraint } = Matter;
+        
+        // Create an engine
+        const engine = Engine.create();
+        const world = engine.world;
+
+        // Create a renderer
+        const render = Render.create({
+            element: document.getElementById('simulation'),
+            engine: engine,
+            options: {
+                width: 800,
+                height: 400,
+                wireframes: false,
+                background: '#fff'
+            }
+        });
+
+        // Create a runner
+        const runner = Runner.create();
+
+        // Add ground
+        const ground = Bodies.rectangle(400, 390, 810, 60, { isStatic: true });
+        Composite.add(world, ground);
+
+        // Run the renderer
+        Render.run(render);
+
+        // Run the engine
+        Runner.run(runner, engine);
+
+        // Mouse control
+        const mouse = Mouse.create(render.canvas);
+        const mouseConstraint = MouseConstraint.create(engine, {
+            mouse: mouse,
+            constraint: {
+                render: { visible: false }
+            }
+        });
+        Composite.add(world, mouseConstraint);
+        render.mouse = mouse;
+
+        // Add blocks at cursor position
+        let cursorPosition = { x: 400, y: 200 }; // Default position
+
+        document.getElementById('simulation').addEventListener('mousemove', function(event) {
+            const rect = render.canvas.getBoundingClientRect();
+            cursorPosition.x = event.clientX - rect.left;
+            cursorPosition.y = event.clientY - rect.top;
+        });
+
+        document.getElementById('simulation').addEventListener('click', function(event) {
+            const block = Bodies.rectangle(cursorPosition.x, cursorPosition.y, 40, 40, { restitution: 0.5 });
+            Composite.add(world, block);
+        });
+
+        // Simulate earthquake
+        function simulateEarthquake() {
+            const duration = parseInt(document.getElementById('duration').value) * 1000;
+            const magnitude = parseInt(document.getElementById('magnitude').value);
+
+            const shakeIntensity = magnitude * 0.005;
+
+            let elapsedTime = 0;
+            const interval = setInterval(() => {
+                Composite.allBodies(world).forEach(body => {
+                    if (!body.isStatic) {
+                        Body.applyForce(body, { x: body.position.x, y: body.position.y }, { 
+                            x: (Math.random() - 0.5) * shakeIntensity, 
+                            y: (Math.random() - 0.5) * shakeIntensity 
+                        });
+                    }
+                });
+                elapsedTime += 50;
+                if (elapsedTime >= duration) {
+                    clearInterval(interval);
+                }
+            }, 50);
+        }
+    </script>
+</body>
+</html>
